@@ -1,0 +1,57 @@
+% !TEX program = xelatex
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+
+% ファミリー名で指定
+\setmainfont{Noto Serif CJK JP}
+\setCJKmainfont{Noto Serif CJK JP}
+
+
+% ハイパーリンク（PDFのしおり用）
+\usepackage{hyperref}
+
+\title{XeLaTeX テスト文書}
+\author{あなたの名前}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{はじめに}
+これはXeLaTeXのテスト文書です。日本語とEnglishが混在しても問題なく処理できます。
+
+\section{様々な要素のテスト}
+
+\subsection{箇条書き}
+\begin{itemize}
+    \item 第一の項目
+    \item 第二の項目
+    \item \textbf{太字}や\textit{斜体}も使えます
+\end{itemize}
+
+\subsection{数式}
+インライン数式: $E = mc^2$
+
+別行立て数式:
+\[
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+\]
+
+\subsection{表}
+\begin{tabular}{|c|c|c|}
+\hline
+名前 & 年齢 & 職業 \\
+\hline
+山田太郎 & 25 & エンジニア \\
+\hline
+佐藤花子 & 30 & デザイナー \\
+\hline
+\end{tabular}
+
+\section{結論}
+XeLaTeXを使えば、日本語文書の作成がとても簡単になります！
+
+\end{document}

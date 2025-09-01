@@ -1,0 +1,58 @@
+% !TEX program = xelatex
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK JP} % 日本語フォント指定
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% 定理環境の定義
+\theoremstyle{definition} % 定義用スタイル
+\newtheorem{definition}{定義}[section] % 定義環境
+
+\theoremstyle{plain} % 定理用スタイル
+\newtheorem{theorem}{定理}[section]   % 定理環境
+\newtheorem{lemma}[theorem]{補題}     % 補題環境
+\newtheorem{proposition}[theorem]{命題} % 命題環境
+
+\theoremstyle{remark} % 例・注記用スタイル
+\newtheorem{example}{例}[section]     % 例環境
+\newtheorem{remark}{注}[section]      % 注記環境
+
+\begin{document}
+
+\section{数学の基本}
+\begin{definition}
+\end{definition}
+
+\begin{definition}[連続関数]
+関数 $f: \mathbb{R} \to \mathbb{R}$ が点 $a$ で連続であるとは、
+任意の $\epsilon > 0$ に対して、ある $\delta > 0$ が存在して、
+$|x - a| < \delta$ ならば $|f(x) - f(a)| < \epsilon$ が成り立つことをいう。
+\end{definition}
+
+\begin{theorem}[中間値の定理]
+関数 $f$ が閉区間 $[a, b]$ で連続で、$f(a) \neq f(b)$ ならば、
+$f(a)$ と $f(b)$ の間の任意の値 $k$ に対して、
+$f(c) = k$ となる $c \in (a, b)$ が存在する。
+\end{theorem}
+
+\begin{proof}
+連続関数の性質より…（証明がここに入ります）
+\end{proof}
+
+\begin{example}
+関数 $f(x) = x^2$ はすべての点で連続である。
+\end{example}
+
+\begin{lemma}[有用な補題]
+ある条件が成り立つとき、別の条件も成り立つ。
+\end{lemma}
+
+\begin{proposition}[重要な命題]
+ある主張が成り立つ。
+\end{proposition}
+
+\end{document}

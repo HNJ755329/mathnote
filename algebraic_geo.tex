@@ -1,0 +1,84 @@
+% !TEX program = xelatex
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK JP} % 日本語フォント指定
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% 定理環境の定義
+\theoremstyle{definition} % 定義用スタイル
+\newtheorem{definition}{Definition}[section] % 定義環境
+
+\theoremstyle{plain} % 定理用スタイル
+\newtheorem{theorem}{Theorem}[section]   % 定理環境
+\newtheorem{lemma}[theorem]{Lemma}     % 補題環境
+\newtheorem{proposition}[theorem]{Proposition} % 命題環境
+
+\theoremstyle{remark} % 例・注記用スタイル
+\newtheorem{example}{example}[section]     % 例環境
+\newtheorem{remark}{remark}[section]      % 注記環境
+
+\begin{document}
+
+\section{topological space}
+\begin{definition}[irreducible]
+  A topological space is said to be irreducible if it is nonempty, and it is not
+the union of two proper closed subsets. In other words, a nonempty topological
+space X is irreducible if whenever $X = Y \cup Z$ with Y and Z closed in X, we have
+Y = X or Z = X. Equivalently (and helpfully): any two nonempty open subsets of
+X intersect.
+\end{definition}
+
+
+\begin{definition}[irreducible component]
+An irreducible component of a topological space is a maximal irreducible subset (an irreducible subset not contained in any larger irreducible subset). Irreducible components are closed (as the closure of irreducible subsets are irreducible), and it can be helpful to think of irreducible components of a
+topological space X as maximal among the irreducible closed subsets of X. We think
+of these as the “pieces of X”.
+\end{definition}
+
+\begin{definition}[connected component]
+  A subset Y of a topological space X is a connected component if it is a maximal connected subset (a connected subset not contained in any larger connected subset).
+\end{definition}
+
+\begin{definition}[Noetherian topological space]
+  A topological space X is called Noetherian if it satisfies the descending chain condition for closed subsets: any sequence $Z_1 \supset Z_2 \supset \cdots \supset Z_n \supset \cdots$ of closed subsets eventually stabilizes: there is an r such that $Z_r = Z_{r+1} = \cdots $.
+\end{definition}
+
+\begin{definition}[quasicompact(準コンパクト)]
+  A topological space X is quasicompact if given any cover $X = \cup_{i \in I} U_i$ by open sets, there is a finite subset S of the index set I such that $X = \cup_{i \in S}U_i$.
+  Informally: every open cover has a finite subcover.
+\end{definition}
+
+\begin{definition}[compact]
+Hausdorff + quasicompact = compact.
+\end{definition}
+
+
+\begin{definition}[quasiseparated]
+  A topological space is quasiseparated if the intersection of any two quasicompact open subset is quasicompact.
+\end{definition}
+
+\begin{theorem}
+  A is a ring. A is an Artinian ring if and only if A is a Noetherian ring and Krulldim(A) = 0.
+\end{theorem}
+
+\begin{example}
+関数 $f(x) = x^2$ はすべての点で連続である。
+\end{example}
+
+\begin{lemma}[有用な補題]
+ある条件が成り立つとき、別の条件も成り立つ。
+\end{lemma}
+
+\begin{proposition}[重要な命題]
+ある主張が成り立つ。
+\end{proposition}
+
+\begin{definition}
+$\mathcal{O}_X$ scheme.
+\end{definition}
+
+\end{document}
