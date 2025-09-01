@@ -1,0 +1,2 @@
+# mathnote
+latex notes
