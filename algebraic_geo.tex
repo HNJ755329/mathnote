@@ -65,20 +65,31 @@ Hausdorff + quasicompact = compact.
   A is a ring. A is an Artinian ring if and only if A is a Noetherian ring and Krulldim(A) = 0.
 \end{theorem}
 
+\section{ring}
+\section{sheaf}
+\begin{definition}[presheaf]
+  presheaf F is functor SetX to Rng.
+\end{definition}
+\begin{definition}[sheaf]
+  presheaf F is sheaf if it satisfy identity axiom and gluing axiom.
+  Identity axiom.
+  Gluing axiom.
+\end{definition}
+
 \begin{example}
-関数 $f(x) = x^2$ はすべての点で連続である。
+  $C^0(\cdot), C^\infty(\cdot)$ are sheaf.
 \end{example}
 
-\begin{lemma}[有用な補題]
-ある条件が成り立つとき、別の条件も成り立つ。
-\end{lemma}
+\section{scheme}
+\begin{definition}[Affine scheme]
+  $(SpecA,\mathcal{O}_{SpecA})$ is affine scheme.
+  SpecA has zarisky topology.
+  $\Gamma(D(f),\mathcal{O}_{SpecA}) = A_f$
+\end{definition}
 
-\begin{proposition}[重要な命題]
-ある主張が成り立つ。
-\end{proposition}
 
-\begin{definition}
-$\mathcal{O}_X$ scheme.
+\begin{definition}[scheme]
+  $(X,\mathcal{O}_X)$ is locally affine scheme.
 \end{definition}
 
 \end{document}
